@@ -1,6 +1,3 @@
-from django.shortcuts import render
-
-# Create your views here.
 from __future__ import unicode_literals
 from django.shortcuts import render
 from django.views.generic import View, TemplateView
@@ -14,6 +11,9 @@ import Adafruit_SSD1306
 from PIL import Image
 from PIL import ImageDraw
 from PIL import ImageFont
+
+# Create your views here.
+
 
 
 def homepage(request):  # render index.html
