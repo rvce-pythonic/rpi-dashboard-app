@@ -15,7 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from .views import homepage, led, oled
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('^$', homepage),
+    path('^led$', led.as_view()),
+    path('^oled$', oled.as_view())
 ]

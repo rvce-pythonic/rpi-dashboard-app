@@ -1,10 +1,39 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+        }
+
+    </style>
 </head>
 <body>
-
+<table>
+    <tr>
+        <th> led</th>
+        <th> temperature</th>
+        <th> humidity</th>
+        <th> oled</th>
+    </tr>
+    <tr>
+        <td>
+            <form action="led" method="POST">
+                <input type="submit" value=" ON / OFF "/>{% csrf_token %}
+            </form>
+        </td>
+        <td>
+            {{ tempdata }} celsius
+        </td>
+        <td>
+            {{ humiddata }}%
+        </td>
+        <td>
+            <form action="oled" method="POST">
+                <input type="text" name=" oleddata "/>
+                <input type="submit" value="print on oled"/>{% csrf_token %}
+            </form>
+        </td>
+    </tr>
+</table>
 </body>
 </html>
