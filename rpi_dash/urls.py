@@ -19,7 +19,7 @@ from .views import homepage, led, oled
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('^$', homepage),
-    path('^led$', led.as_view()),
-    path('^oled$', oled.as_view())
+    path('', homepage),
+    path('led', led.as_view()),
+    path('oled', oled.as_view())
 ]
