@@ -18,7 +18,7 @@ from PIL import ImageFont
 
 def homepage(request):  # render index.html
     humid, temp = Adafruit_DHT.read_retry(11, 4)
-    return render(request, 'index.html', {"temp data": temp, "humid data": humid})  # send temperature and humididty data
+    return render(request, 'index.html', {"tempdata": temp, "humiddata": humid})  # send temperature and humididty data
 
 
 class led(View):  # led ON and OFF
