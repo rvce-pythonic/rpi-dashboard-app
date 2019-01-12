@@ -1,11 +1,14 @@
 <html>
+{% load static %}
 <head>
+
     <style>
         table, th, td {
             border: 1px solid grey;
         }
 
     </style>
+    <link rel="stylesheet" type="text/css" href="{% static 'bootstrap.min.css' %}">
 
 </head>
 <body>
@@ -36,5 +39,6 @@
         </td>
     </tr>
 </table>
+<script charset="utf-8" type="text/javascript" src="{% static 'bootstrap.min.js' %}"></script>
 </body>
 </html>
