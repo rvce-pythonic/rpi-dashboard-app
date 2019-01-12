@@ -12,33 +12,45 @@
 
 </head>
 <body>
-<table>
-    <tr>
-        <th> led</th>
-        <th> temperature</th>
-        <th> humidity</th>
-        <th> oled</th>
-    </tr>
-    <tr>
-        <td>
-            <form action="led" method="POST">
-                <input type="submit" value=" ON / OFF "/>{% csrf_token %}
-            </form>
-        </td>
-        <td>
-            {{tempdata}} celsius
-        </td>
-        <td>
-            {{humiddata}}%
-        </td>
-        <td>
-            <form action="oled" method="POST">
-                <input type="text" name="oleddata"/>
-                <input type="submit" value="print on oled"/>{% csrf_token %}
-            </form>
-        </td>
-    </tr>
-</table>
+
+<div class="container-fluid">
+    <div class="row text-center m-4 p-4">
+        <div class="col-md-12 text-center">
+            <h2> RPI Dashboard</h2>
+        </div>
+    </div>
+    <div class="row text-center m-4 p-4">
+        <div class="col-md-12 text-center">
+            <table>
+                <tr>
+                    <th> led</th>
+                    <th> temperature</th>
+                    <th> humidity</th>
+                    <th> oled</th>
+                </tr>
+                <tr>
+                    <td>
+                        <form action="led" method="POST">
+                            <input type="submit" value=" ON / OFF "/>{% csrf_token %}
+                        </form>
+                    </td>
+                    <td>
+                        {{ tempdata }} celsius
+                    </td>
+                    <td>
+                        {{ humiddata }}%
+                    </td>
+                    <td>
+                        <form action="oled" method="POST">
+                            <input type="text" name="oleddata"/>
+                            <input type="submit" value="print on oled"/>{% csrf_token %}
+                        </form>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
 <script charset="utf-8" type="text/javascript" src="{% static 'bootstrap.min.js' %}"></script>
 </body>
 </html>
