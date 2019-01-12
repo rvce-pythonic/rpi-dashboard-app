@@ -113,7 +113,7 @@ venv.bak/
 *.iml
 out
 gen
-/venv/
+/venv/lib/*
 libraries/Adafruit_Python_GPIO/.github/
 libraries/Adafruit_Python_GPIO/.gitignore
 libraries/Adafruit_Python_GPIO/Adafruit_GPIO/
