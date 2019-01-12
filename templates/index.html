@@ -20,14 +20,19 @@
         </div>
     </div>
     <div class="row text-center m-4 p-4">
-        <div class="col-md-12 text-center">
-            <table>
+        <div class="container">
+            <h2>Basic Table</h2>
+            <p>The .table class adds basic styling (light padding and horizontal dividers) to a table:</p>
+            <table class="table">
+                <thead>
                 <tr>
-                    <th> led</th>
-                    <th> temperature</th>
-                    <th> humidity</th>
-                    <th> oled</th>
+                    <th>led</th>
+                    <th>temperature</th>
+                    <th>humidity</th>
+                    <th>oled</th>
                 </tr>
+                </thead>
+                <tbody>
                 <tr>
                     <td>
                         <form action="led" method="POST">
@@ -47,6 +52,7 @@
                         </form>
                     </td>
                 </tr>
+                </tbody>
             </table>
         </div>
     </div>
