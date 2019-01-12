@@ -14,8 +14,6 @@ from PIL import ImageFont
 
 # Create your views here.
 
-
-
 def homepage(request):  # render index.html
     humid, temp = Adafruit_DHT.read_retry(11, 4)
     return render(request, 'index.html', {"tempdata": temp, "humiddata": humid})  # send temperature and humididty data
